@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: rgb(11, 240, 11);
+}
+
+div{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.post{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: 900;
+    display: none;
+}
