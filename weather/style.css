@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body{
+    background: #10d1f3;
+    color: #2e105e;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    background: rgb(96, 223, 255);
+    width: 40%;
+    height: 60%;
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
+    padding: 10px;
+}
+
+.upper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.input{
+    border: none;
+    outline: none;
+    caret-color: rgb(179, 174, 174);
+    font-size: 25px;
+    text-align: center;
+    transition: all .8s;
+    background: transparent;
+    border-bottom: 2px solid white;
+    letter-spacing: 3px;
+    width: 70%;
+    text-transform: uppercase;
+}
+
+.middle{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidelower{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.rgrp,.sgrp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search{
+    width: 30px;
+    cursor: pointer;
+}
+.location{
+    width: 30px;
+}
+
+.city{
+    display: flex;
+    gap: 10px;
+}
+
+.sun{
+    width: 35px;
+
+}
+.status{
+    font-size: 20px;
+}
+
+.statusimg img{
+    width: 90px;
+    position: absolute;top: 36%;
+}
+
+.invert{
+    filter: invert(0);
+}
+
+.lower{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+    gap: 20px;
+    text-transform: capitalize;
+
+
+}
+
+.humidity, .feelslike{
+    /* background-color: white; */
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inhumidity, .infeelslike{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lower div:nth-child(1){
+    font-size: 80px;
+}
+.lower div:nth-child(3){
+    font-size: 25px;
+}
+
+.lastlower{
+    height: 30%;
+    padding: 10px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lowimg{
+    width: 40px;
+}
+
+
+@media (max-width:1171px){
+    .container{
+        width:70%
+    }
+    .lower div:nth-child(1){
+        font-size: 30px;
+    }
+    .statusimg img{
+        top:30%;
+    }
+}
