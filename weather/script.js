@@ -27,7 +27,7 @@ const toGMT = (time) => {
 
 
 const getWeather = async (city_name) => {
-    let data = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=${5}&appid=${API_KEY}`)
+    let data = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=${5}&appid=${API_KEY}`)
     let info = await data.json();
 
     let lat = info[0].lat
