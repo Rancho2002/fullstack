@@ -26,6 +26,7 @@ const toGMT = (time) => {
 }
 
 
+
 const getWeather = async (city_name) => {
     let data = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=${5}&appid=${API_KEY}`)
     let info = await data.json();
@@ -53,10 +54,15 @@ const getWeather = async (city_name) => {
                 alt="location"
                 class="invert location"
               />`;
+            
 
 
-    document.getElementsByClassName('location')[0].addEventListener('click',()=>{
-   
+    let loc=document.getElementsByClassName('location')[0];  
+    loc.addEventListener('mouseover',()=>{
+        loc.style.cursor='pointer';
+    })
+
+    loc.addEventListener('click',()=>{
         let place=document.getElementsByClassName('input')[0].value;
         window.open(`https://www.google.com/search?q=${place}`,'_blank')
     })

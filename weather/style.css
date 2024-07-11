@@ -6,6 +6,10 @@
     font-family: "Nunito Sans", sans-serif;
 }
 
+:root{
+    --color:transparent;
+}
+
 body{
     background: #10d1f3;
     color: #2e105e;
@@ -70,8 +74,19 @@ body{
 
 .search{
     width: 30px;
+}
+
+.btn-s:hover{
+    --color:rgb(38, 174, 253);
     cursor: pointer;
 }
+
+.btn-s{
+    background-color: var(--color);
+    padding: 14px 16px;
+    border-radius: 50%;
+}
+
 .location{
     width: 30px;
 }
