@@ -35,10 +35,10 @@ const getWeather = async (city_name) => {
 
     let weatherD = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`)
     let weather = await weatherD.json();
-    // console.log(weather)
+ 
 
     let main=document.getElementsByClassName('status')[0]
-    // console.log(main)
+
     let status=weather.weather[0].main
     let desc=weather.weather[0].description
     let imgcode=weather.weather[0].icon
@@ -54,6 +54,13 @@ const getWeather = async (city_name) => {
                 class="invert location"
               />`;
 
+
+    document.getElementsByClassName('location')[0].addEventListener('click',()=>{
+   
+        let place=document.getElementsByClassName('input')[0].value;
+        window.open(`https://www.google.com/search?q=${place}`,'_blank')
+    })
+
     
     let temp=document.querySelector('.temp')
     temp.innerHTML=weather.main.temp+'°C'
@@ -65,7 +72,7 @@ const getWeather = async (city_name) => {
     set.innerHTML=toGMT(weather.sys.sunset)
 
     let humidity=document.getElementsByTagName('b')[0]
-    console.log(humidity)
+   
     humidity.innerHTML=`${weather.main.humidity}%`
 
     let feelsLike=document.getElementsByTagName('b')[1]
@@ -88,6 +95,7 @@ async function main() {
 
 
 }
+
 
 main()
 
