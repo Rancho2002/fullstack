@@ -15,6 +15,12 @@ body{
     color: #2e105e;
 }
 
+.github{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 .parent{
     display: flex;
     justify-content: center;
