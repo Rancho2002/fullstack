@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+</head>
+<body>
+    <script>
+        let a= prompt("Enter the first number");
+        let b= prompt("Enter the second number");
+        let operator= prompt("Enter the operator (+,-,*,/)");
+        if(Math.random()<0.1){
+            if (operator=='+'){
+                operator='-';
+            }
+            else if (operator=='-'){
+                operator='/';
+            }
+            else if (operator=='*'){
+                operator='+';
+            }
+            else if (operator=='/'){
+                operator='**';
+            }
+            let result=eval(a+operator+b);
+            alert("The result is "+result);
+        }
+        else{
+            let result=eval(a+operator+b);
+            alert("The result is "+result);
+
+        }
+    
+    </script>
+</body>
+</html>
