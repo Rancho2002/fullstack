@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities{
+    .margin-center{
+        margin: auto 3px;
+
+    }
+    .font-roboto{
+        font-family: "Roboto", sans-serif;
+    }
+}
